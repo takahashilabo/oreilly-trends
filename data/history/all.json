@@ -1,0 +1,302 @@
+{
+  "9781491903063": {
+    "title": "Designing Data-Intensive Applications",
+    "ranks": {
+      "2026-09-23": 1
+    }
+  },
+  "9781098125967": {
+    "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 3rd Edition",
+    "ranks": {
+      "2026-09-23": 2
+    }
+  },
+  "9781098150952": {
+    "title": "Hands-On Large Language Models",
+    "ranks": {
+      "2026-09-23": 3
+    }
+  },
+  "9781098156664": {
+    "title": "Python Crash Course, 3rd Edition",
+    "ranks": {
+      "2026-09-23": 4
+    }
+  },
+  "9781633437166": {
+    "title": "Build a Large Language Model (From Scratch)",
+    "ranks": {
+      "2026-09-23": 5
+    }
+  },
+  "9781394254699": {
+    "title": "ISC2 CISSP Certified Information Systems Security Professional Official Study Guide, 10th Edition",
+    "ranks": {
+      "2026-09-23": 6
+    }
+  },
+  "9781098108298": {
+    "title": "Fundamentals of Data Engineering",
+    "ranks": {
+      "2026-09-23": 7
+    }
+  },
+  "9781098171292": {
+    "title": "Learning Python, 6th Edition",
+    "ranks": {
+      "2026-09-23": 8
+    }
+  },
+  "9781098139285": {
+    "title": "Learning Go, 2nd Edition",
+    "ranks": {
+      "2026-09-23": 9
+    }
+  },
+  "9781492056348": {
+    "title": "Fluent Python, 2nd Edition",
+    "ranks": {
+      "2026-09-23": 10
+    }
+  },
+  "9781098107956": {
+    "title": "Designing Machine Learning Systems",
+    "ranks": {
+      "2026-09-23": 11
+    }
+  },
+  "9781492077992": {
+    "title": "Head First Design Patterns, 2nd Edition",
+    "ranks": {
+      "2026-09-23": 12
+    }
+  },
+  "9781836200079": {
+    "title": "LLM Engineer's Handbook",
+    "ranks": {
+      "2026-09-23": 13
+    }
+  },
+  "9781633439108": {
+    "title": "Acing the System Design Interview",
+    "ranks": {
+      "2026-09-23": 14
+    }
+  },
+  "9781098167271": {
+    "title": "Learning LangChain",
+    "ranks": {
+      "2026-09-23": 15
+    }
+  },
+  "9780136083238": {
+    "title": "Clean Code: A Handbook of Agile Software Craftsmanship",
+    "ranks": {
+      "2026-09-23": 16
+    }
+  },
+  "9781633436343": {
+    "title": "AI Agents in Action",
+    "ranks": {
+      "2026-09-23": 17
+    }
+  },
+  "9781492043447": {
+    "title": "Fundamentals of Software Architecture",
+    "ranks": {
+      "2026-09-23": 18
+    }
+  },
+  "9781098153427": {
+    "title": "Prompt Engineering for Generative AI",
+    "ranks": {
+      "2026-09-23": 19
+    }
+  },
+  "9781098175504": {
+    "title": "Fundamentals of Software Architecture, 2nd Edition",
+    "ranks": {
+      "2026-09-23": 20
+    }
+  },
+  "9781098118723": {
+    "title": "The Staff Engineer's Path",
+    "ranks": {
+      "2026-09-23": 21
+    }
+  },
+  "9781098104023": {
+    "title": "Python for Data Analysis, 3rd Edition",
+    "ranks": {
+      "2026-09-23": 22
+    }
+  },
+  "9780138216993": {
+    "title": "CCNP and CCIE Enterprise Core ENCOR 350-401 Official Cert Guide, 2nd Edition",
+    "ranks": {
+      "2026-09-23": 23
+    }
+  },
+  "9781394235605": {
+    "title": "CompTIA Network+ Study Guide, 6th Edition",
+    "ranks": {
+      "2026-09-23": 24
+    }
+  },
+  "9781119862918": {
+    "title": "CompTIA A+ Complete Study Guide, 5th Edition",
+    "ranks": {
+      "2026-09-23": 25
+    }
+  },
+  "9781492091646": {
+    "title": "Head First Java, 3rd Edition",
+    "ranks": {
+      "2026-09-23": 26
+    }
+  },
+  "9781098156145": {
+    "title": "Prompt Engineering for LLMs",
+    "ranks": {
+      "2026-09-23": 27
+    }
+  },
+  "9781098166823": {
+    "title": "Databricks Certified Data Engineer Associate Study Guide",
+    "ranks": {
+      "2026-09-23": 28
+    }
+  },
+  "9781394286614": {
+    "title": "OCP Oracle Certified Professional Java SE 21 Developer Study Guide",
+    "ranks": {
+      "2026-09-23": 29
+    }
+  },
+  "9780135956977": {
+    "title": "The Pragmatic Programmer: your journey to mastery, 20th Anniversary Edition, 2nd Edition",
+    "ranks": {
+      "2026-09-23": 30
+    }
+  },
+  "9781633438538": {
+    "title": "Grokking Algorithms, Second Edition",
+    "ranks": {
+      "2026-09-23": 31
+    }
+  },
+  "9781098110192": {
+    "title": "Kubernetes: Up and Running, 3rd Edition",
+    "ranks": {
+      "2026-09-23": 32
+    }
+  },
+  "9780138293215": {
+    "title": "CompTIA Security+ SY0-701 Cert Guide",
+    "ranks": {
+      "2026-09-23": 33
+    }
+  },
+  "9781492032632": {
+    "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2nd Edition",
+    "ranks": {
+      "2026-09-23": 34
+    }
+  },
+  "9780138229856": {
+    "title": "CCNA 200-301 Official Cert Guide, Volume 1, 2nd Edition",
+    "ranks": {
+      "2026-09-23": 35
+    }
+  },
+  "9780134686097": {
+    "title": "Effective Java, 3rd Edition",
+    "ranks": {
+      "2026-09-23": 36
+    }
+  },
+  "9781492043072": {
+    "title": "Kafka: The Definitive Guide, 2nd Edition",
+    "ranks": {
+      "2026-09-23": 37
+    }
+  },
+  "9781801819312": {
+    "title": "Machine Learning with PyTorch and Scikit-Learn",
+    "ranks": {
+      "2026-09-23": 38
+    }
+  },
+  "9781628256642": {
+    "title": "A Guide to the Project Management Body of Knowledge (PMBOK® Guide) – Seventh Edition and The Standard for Project Management (ENGLISH)",
+    "ranks": {
+      "2026-09-23": 39
+    }
+  },
+  "9781492052586": {
+    "title": "Programming Rust, 2nd Edition",
+    "ranks": {
+      "2026-09-23": 40
+    }
+  },
+  "9781098153632": {
+    "title": "Platform Engineering",
+    "ranks": {
+      "2026-09-23": 41
+    }
+  },
+  "9780134494272": {
+    "title": "Clean Architecture: A Craftsman's Guide to Software Structure and Design",
+    "ranks": {
+      "2026-09-23": 42
+    }
+  },
+  "9781835880302": {
+    "title": "The Kubernetes Book - Second Edition",
+    "ranks": {
+      "2026-09-23": 43
+    }
+  },
+  "9781492057604": {
+    "title": "Learning SQL, 3rd Edition",
+    "ranks": {
+      "2026-09-23": 44
+    }
+  },
+  "9781617296864": {
+    "title": "Deep Learning with Python, Second Edition",
+    "ranks": {
+      "2026-09-23": 45
+    }
+  },
+  "9781119864585": {
+    "title": "OCP Oracle Certified Professional Java SE 17 Developer Study Guide",
+    "ranks": {
+      "2026-09-23": 46
+    }
+  },
+  "9781835084236": {
+    "title": "Solutions Architect's Handbook - Third Edition",
+    "ranks": {
+      "2026-09-23": 47
+    }
+  },
+  "9781492041122": {
+    "title": "Data Science from Scratch, 2nd Edition",
+    "ranks": {
+      "2026-09-23": 48
+    }
+  },
+  "9781491952016": {
+    "title": "JavaScript: The Definitive Guide, 7th Edition",
+    "ranks": {
+      "2026-09-23": 49
+    }
+  },
+  "9781098165826": {
+    "title": "Data Engineering Design Patterns",
+    "ranks": {
+      "2026-09-23": 50
+    }
+  }
+}

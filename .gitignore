@@ -1,0 +1,4 @@
+# Raw fetched pools: bulk O'Reilly catalog data, kept local only.
+data/pool/
+.DS_Store
+__pycache__/
