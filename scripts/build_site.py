@@ -7,6 +7,7 @@ Usage:
   python3 scripts/build_site.py            # use the latest pool file
   python3 scripts/build_site.py 2026-09-23  # use a specific date
 """
+import html
 import json
 import sys
 from datetime import datetime, timedelta, timezone
@@ -94,7 +95,7 @@ def load_prev_ranks(view_key: str, today: str):
         return {}, {}, None
     prev_date = dates[-1]
     prev_ranks = {aid: entry["ranks"][prev_date] for aid, entry in history.items() if prev_date in entry["ranks"]}
-    prev_titles = {aid: entry["title"] for aid, entry in history.items() if prev_date in entry["ranks"]}
+    prev_titles = {aid: (entry["title"], entry.get("path")) for aid, entry in history.items() if prev_date in entry["ranks"]}
     return prev_ranks, prev_titles, prev_date
 
 
@@ -109,6 +110,7 @@ def update_history(view_key: str, today: str, books: list[dict]):
         aid = b["archive_id"]
         entry = history.setdefault(aid, {"title": b["title"], "ranks": {}})
         entry["title"] = b["title"]
+        entry["path"] = b.get("web_path")
         entry["ranks"][today] = b["rank"]
     with open(hist_file, "w", encoding="utf-8") as f:
         json.dump(history, f, ensure_ascii=False, indent=2)
@@ -126,6 +128,11 @@ def change_badge(book, prev_ranks):
     return '<span class="badge flat">-</span>'
 
 
+def book_link(title, path, archive_id):
+    url = "https://learning.oreilly.com" + (path or f"/library/view/-/{archive_id}/")
+    return f'<a href="{html.escape(url)}" target="_blank" rel="noopener">{html.escape(title)}</a>'
+
+
 def compute_movers(books, prev_ranks, prev_titles, top_k=6):
     """前回との差分から、上昇/下降/新登場/圏外のハイライトを作る"""
     current_ids = {b["archive_id"] for b in books}
@@ -137,15 +144,15 @@ def compute_movers(books, prev_ranks, prev_titles, top_k=6):
             continue
         diff = prev - b["rank"]
         if diff > 0:
-            gains.append((b["title"], diff))
+            gains.append((book_link(b["title"], b.get("web_path"), b["archive_id"]), diff))
         elif diff < 0:
-            losses.append((b["title"], -diff))
+            losses.append((book_link(b["title"], b.get("web_path"), b["archive_id"]), -diff))
     gains.sort(key=lambda x: -x[1])
     losses.sort(key=lambda x: -x[1])
 
-    new_entries = [b["title"] for b in books if b["archive_id"] not in prev_ranks]
+    new_entries = [book_link(b["title"], b.get("web_path"), b["archive_id"]) for b in books if b["archive_id"] not in prev_ranks]
     dropped = [
-        (prev_titles[aid], rank)
+        (book_link(*prev_titles[aid], aid), rank)
         for aid, rank in prev_ranks.items()
         if aid not in current_ids
     ]
@@ -280,6 +287,8 @@ def render_html(today: str, view_data: dict):
   .chip.down b {{ color: var(--down); }}
   .chip.new {{ color: var(--new); border-color: #cfe0fb; }}
   .chip.out {{ color: #999; text-decoration: line-through; }}
+  .chip a {{ color: inherit; text-decoration: none; }}
+  .chip a:hover {{ text-decoration: underline; }}
   .movers-empty {{ font-size: 12px; color: var(--sub); margin-bottom: 14px; }}
   footer {{ text-align: center; color: var(--sub); font-size: 12px; margin-top: 24px; }}
   @media (max-width: 600px) {{
