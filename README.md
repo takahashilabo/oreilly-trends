@@ -34,16 +34,40 @@ exports of O'Reilly's catalog. To refresh:
    ```
    python3 scripts/build_site.py
    ```
-   This rebuilds `index.html` and updates `data/history/*.json` (used to compute the
-   day-over-day diff).
+   This rebuilds `index.html`, updates `data/history/*.json` (used to compute the
+   day-over-day diff), and writes a Markdown blog post for the "Last month" view to
+   `posts/<date>.md` (gitignored).
+4. Commit and push (`index.html` and `data/history/*.json`) to update GitHub Pages.
+
+## Publishing to Hatena Blog
+
+The "Last month" post can be published to Hatena Blog via the AtomPub API:
+
+```
+python3 scripts/post_hatena.py [YYYY-MM-DD]            # publish (default: latest post)
+python3 scripts/post_hatena.py --update [YYYY-MM-DD]   # overwrite an already published post
+```
+
+Credentials live in a local, gitignored `.env`:
+
+```
+HATENA_ID=<your Hatena ID>
+HATENA_BLOG_ID=<yourblog>.hatenablog.com
+HATENA_API_KEY=<AtomPub API key from the Hatena Blog settings>
+```
+
+A published post is recorded in `posts/<date>.url`, so re-running won't double-post.
 
 ## Directory layout
 
 ```
 index.html                 Generated page (this is what gets published)
-scripts/build_site.py       pool -> index.html
+scripts/build_site.py       pool -> index.html + posts/<date>.md
+scripts/post_hatena.py      posts/<date>.md -> Hatena Blog (AtomPub)
 data/history/<view>.json    Per-view rank history (small, used for diffing)
 data/pool/                  Raw fetched pools (gitignored — not published)
+posts/                      Generated blog posts (gitignored)
+.env                        Hatena credentials (gitignored)
 ```
 
 ## Notes

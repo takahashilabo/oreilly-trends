@@ -18,6 +18,7 @@ DATA_DIR = ROOT / "data"
 POOL_DIR = DATA_DIR / "pool"
 HISTORY_DIR = DATA_DIR / "history"
 INDEX_HTML = ROOT / "index.html"
+POSTS_DIR = ROOT / "posts"
 
 TOP_N = 50
 
@@ -323,6 +324,89 @@ def render_html(today: str, view_data: dict):
     INDEX_HTML.write_text(html, encoding="utf-8")
 
 
+def md_link(title, path, archive_id):
+    url = "https://learning.oreilly.com" + (path or f"/library/view/-/{archive_id}/")
+    safe = title.replace("[", "(").replace("]", ")").replace("|", "/")
+    return f"[{safe}]({url})"
+
+
+def md_badge(book, prev_ranks):
+    prev = prev_ranks.get(book["archive_id"])
+    if prev is None:
+        return "NEW"
+    diff = prev - book["rank"]
+    if diff > 0:
+        return f"▲{diff}"
+    if diff < 0:
+        return f"▼{-diff}"
+    return "-"
+
+
+def render_markdown(today, books, prev_ranks, prev_titles, prev_date, total_candidates):
+    """Blog post (Markdown) for the 'Last month' view."""
+    lines = [f"# [{today}] Today's #1: {books[0]['title']} - O'Reilly Top {len(books)} (Last month)", ""]
+    lines.append(
+        f"Ranking as of {today} of books published within the last month on O'Reilly Learning, ordered by popularity "
+        f"({total_candidates} candidates). Change is compared with the previous run"
+        + (f" ({prev_date})." if prev_date else " (first run).")
+    )
+    lines.append("")
+
+    if prev_date:
+        current_ids = {b["archive_id"] for b in books}
+        gains = sorted(
+            ((prev_ranks[b["archive_id"]] - b["rank"], b) for b in books
+             if b["archive_id"] in prev_ranks and prev_ranks[b["archive_id"]] > b["rank"]),
+            key=lambda x: -x[0])[:6]
+        losses = sorted(
+            ((b["rank"] - prev_ranks[b["archive_id"]], b) for b in books
+             if b["archive_id"] in prev_ranks and prev_ranks[b["archive_id"]] < b["rank"]),
+            key=lambda x: -x[0])[:6]
+        new = [b for b in books if b["archive_id"] not in prev_ranks][:6]
+        dropped = sorted(
+            ((r, aid) for aid, r in prev_ranks.items() if aid not in current_ids))[:6]
+
+        lines.append("## Highlights")
+        lines.append("")
+        if gains:
+            lines.append("**📈 Gainers**\n\n" + "\n".join("- " + x for x in (
+                f"{md_link(b['title'], b.get('web_path'), b['archive_id'])} ▲{d}" for d, b in gains)))
+            lines.append("")
+        if losses:
+            lines.append("**📉 Losers**\n\n" + "\n".join("- " + x for x in (
+                f"{md_link(b['title'], b.get('web_path'), b['archive_id'])} ▼{d}" for d, b in losses)))
+            lines.append("")
+        if new:
+            lines.append("**🆕 New entries**\n\n" + "\n".join("- " + x for x in (
+                md_link(b["title"], b.get("web_path"), b["archive_id"]) for b in new)))
+            lines.append("")
+        if dropped:
+            lines.append("**📤 Dropped out**\n\n" + "\n".join("- " + x for x in (
+                md_link(*prev_titles[aid], aid) for _, aid in dropped)))
+            lines.append("")
+        if not (gains or losses or new or dropped):
+            lines.append("No change since last time.")
+            lines.append("")
+
+    lines.append("## Ranking")
+    lines.append("")
+    lines.append("| # | Change | Title | Authors | Rating | Reviews |")
+    lines.append("|---:|:---:|---|---|---:|---:|")
+    for b in books:
+        rating = f'{b["average_rating"]/1000:.1f}' if isinstance(b.get("average_rating"), (int, float)) else "-"
+        authors = ", ".join(b.get("authors", [])[:3]).replace("|", "/")
+        lines.append(
+            f"| {b['rank']} | {md_badge(b, prev_ranks)} | "
+            f"{md_link(b['title'], b.get('web_path'), b['archive_id'])} | {authors} | {rating} | {b.get('number_of_reviews') or 0} |")
+    lines.append("")
+    lines.append("Live version (all views): https://takahashilabo.github.io/oreilly-trends/")
+    lines.append("")
+    POSTS_DIR.mkdir(exist_ok=True)
+    out = POSTS_DIR / f"{today}.md"
+    out.write_text("\n".join(lines), encoding="utf-8")
+    return out
+
+
 def main():
     date_arg = sys.argv[1] if len(sys.argv) > 1 else None
     today, pop_pool, recency_pool = load_pools(date_arg)
@@ -336,6 +420,8 @@ def main():
         if meta["months"] is not None:
             note += f" · Published within the last {meta['months']} month(s) ({total_candidates} candidates, showing top {len(books)})"
         movers = compute_movers(books, prev_ranks, prev_titles)
+        if key == "m1":
+            post_path = render_markdown(today, books, prev_ranks, prev_titles, prev_date, total_candidates)
         view_data[key] = {
             "meta": {"label": meta["label"], "note": note},
             "rows": render_rows(books, prev_ranks),
@@ -343,7 +429,7 @@ def main():
         }
 
     render_html(today, view_data)
-    print(f"[OK] {today}: pop_pool={len(pop_pool)}, recency_pool={len(recency_pool)} -> rebuilt index.html with {len(VIEWS)} views.")
+    print(f"[OK] {today}: pop_pool={len(pop_pool)}, recency_pool={len(recency_pool)} -> rebuilt index.html with {len(VIEWS)} views, blog post -> {post_path.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":
