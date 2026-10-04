@@ -8,7 +8,8 @@
       "2026-09-26": 1,
       "2026-09-28": 1,
       "2026-09-29": 1,
-      "2026-09-30": 1
+      "2026-09-30": 1,
+      "2026-10-04": 1
     },
     "path": "/library/view/building-resilient-distributed/9781098163532/"
   },
@@ -21,7 +22,8 @@
       "2026-09-26": 2,
       "2026-09-28": 2,
       "2026-09-29": 2,
-      "2026-09-30": 2
+      "2026-09-30": 2,
+      "2026-10-04": 2
     },
     "path": "/library/view/head-first-sql/9781098163648/"
   },
@@ -34,7 +36,8 @@
       "2026-09-26": 3,
       "2026-09-28": 3,
       "2026-09-29": 3,
-      "2026-09-30": 3
+      "2026-09-30": 3,
+      "2026-10-04": 3
     },
     "path": "/library/view/high-performance-spark/9781098145842/"
   },
@@ -47,7 +50,8 @@
       "2026-09-26": 4,
       "2026-09-28": 4,
       "2026-09-29": 4,
-      "2026-09-30": 4
+      "2026-09-30": 4,
+      "2026-10-04": 4
     },
     "path": "/library/view/rag-with-python/9798341600553/"
   },
@@ -60,7 +64,8 @@
       "2026-09-26": 5,
       "2026-09-28": 5,
       "2026-09-29": 5,
-      "2026-09-30": 5
+      "2026-09-30": 5,
+      "2026-10-04": 5
     },
     "path": "/library/view/learning-generative-ai/9781098190163/"
   },
@@ -73,7 +78,8 @@
       "2026-09-26": 6,
       "2026-09-28": 6,
       "2026-09-29": 6,
-      "2026-09-30": 6
+      "2026-09-30": 6,
+      "2026-10-04": 6
     },
     "path": "/library/view/ml-and-generative/9781098178482/"
   },
@@ -86,7 +92,8 @@
       "2026-09-26": 7,
       "2026-09-28": 7,
       "2026-09-29": 7,
-      "2026-09-30": 7
+      "2026-09-30": 7,
+      "2026-10-04": 7
     },
     "path": "/library/view/azure-devops-explained/9781803238937/"
   },
@@ -99,7 +106,8 @@
       "2026-09-26": 8,
       "2026-09-28": 8,
       "2026-09-29": 8,
-      "2026-09-30": 8
+      "2026-09-30": 8,
+      "2026-10-04": 8
     },
     "path": "/library/view/learning-cloud-security/9781098179410/"
   },
@@ -123,7 +131,8 @@
       "2026-09-26": 11,
       "2026-09-28": 11,
       "2026-09-29": 10,
-      "2026-09-30": 10
+      "2026-09-30": 10,
+      "2026-10-04": 10
     },
     "path": "/library/view/take-control-of/9781990783609/"
   },
@@ -136,7 +145,8 @@
       "2026-09-26": 12,
       "2026-09-28": 12,
       "2026-09-29": 11,
-      "2026-09-30": 11
+      "2026-09-30": 11,
+      "2026-10-04": 11
     },
     "path": "/library/view/take-control-of/9781990783074/"
   },
@@ -617,7 +627,8 @@
       "2026-09-26": 9,
       "2026-09-28": 9,
       "2026-09-29": 9,
-      "2026-09-30": 9
+      "2026-09-30": 9,
+      "2026-10-04": 9
     },
     "path": "/library/view/machine-learning-for/9781837631339/"
   },
@@ -832,49 +843,56 @@
   "0642572455187": {
     "title": "『不正対策担当者のためのAIプレイブック』 (Japanese Edition)",
     "ranks": {
-      "2026-09-30": 12
+      "2026-09-30": 12,
+      "2026-10-04": 44
     },
     "path": "/library/view/ai-japanese-edition/0642572455187/"
   },
   "9781808087936": {
     "title": "Managing AI Hallucinations",
     "ranks": {
-      "2026-09-30": 13
+      "2026-09-30": 13,
+      "2026-10-04": 45
     },
     "path": "/library/view/managing-ai-hallucinations/9781808087936/"
   },
   "9781808658396": {
     "title": "Claude Visual Bible",
     "ranks": {
-      "2026-09-30": 14
+      "2026-09-30": 14,
+      "2026-10-04": 49
     },
     "path": "/library/view/claude-visual-bible/9781808658396/"
   },
   "9781807421052": {
     "title": "AI‑Augmented Domain‑Driven Design",
     "ranks": {
-      "2026-09-30": 15
+      "2026-09-30": 15,
+      "2026-10-04": 50
     },
     "path": "/library/view/aiaugmented-domaindriven-design/9781807421052/"
   },
   "9781808829031": {
     "title": "ChatGPT Visual Bible",
     "ranks": {
-      "2026-09-30": 16
+      "2026-09-30": 16,
+      "2026-10-04": 47
     },
     "path": "/library/view/chatgpt-visual-bible/9781808829031/"
   },
   "9781808087318": {
     "title": "AI Agents & Harnesses Foundations",
     "ranks": {
-      "2026-09-30": 17
+      "2026-09-30": 17,
+      "2026-10-04": 48
     },
     "path": "/library/view/ai-agents/9781808087318/"
   },
   "9781836203278": {
     "title": "The Principal Engineer Handbook",
     "ranks": {
-      "2026-09-30": 18
+      "2026-09-30": 18,
+      "2026-10-04": 46
     },
     "path": "/library/view/the-principal-engineer/9781836203278/"
   },
@@ -891,5 +909,229 @@
       "2026-09-30": 42
     },
     "path": "/library/view/untitled/9784814401796/"
+  },
+  "9781398629417": {
+    "title": "Psychological Safety in Practice",
+    "ranks": {
+      "2026-10-04": 12
+    },
+    "path": "/library/view/psychological-safety-in/9781398629417/"
+  },
+  "9781398628885": {
+    "title": "Strategic Marketing Skills",
+    "ranks": {
+      "2026-10-04": 13
+    },
+    "path": "/library/view/strategic-marketing-skills/9781398628885/"
+  },
+  "9781398629721": {
+    "title": "The AI-Centric HR Operating Model",
+    "ranks": {
+      "2026-10-04": 14
+    },
+    "path": "/library/view/the-ai-centric-hr/9781398629721/"
+  },
+  "9781398630925": {
+    "title": "Practical Teaching Skills for Driving Instructors, 13th Edition",
+    "ranks": {
+      "2026-10-04": 15
+    },
+    "path": "/library/view/practical-teaching-skills/9781398630925/"
+  },
+  "9781398627475": {
+    "title": "Festival Management",
+    "ranks": {
+      "2026-10-04": 16
+    },
+    "path": "/library/view/festival-management/9781398627475/"
+  },
+  "9781398628960": {
+    "title": "Investing Explained, 2nd Edition",
+    "ranks": {
+      "2026-10-04": 17
+    },
+    "path": "/library/view/investing-explained-2nd/9781398628960/"
+  },
+  "9781398629448": {
+    "title": "Social Media Strategy, 3rd Edition",
+    "ranks": {
+      "2026-10-04": 18
+    },
+    "path": "/library/view/social-media-strategy/9781398629448/"
+  },
+  "9781398630758": {
+    "title": "The Driving Instructor's Handbook, 23rd Edition",
+    "ranks": {
+      "2026-10-04": 19
+    },
+    "path": "/library/view/the-driving-instructors/9781398630758/"
+  },
+  "0642572470036": {
+    "title": "『Head First アルゴリズムとデータ構造』 (Japanese Edition)",
+    "ranks": {
+      "2026-10-04": 20
+    },
+    "path": "/library/view/head-first/0642572470036/"
+  },
+  "0642572392468": {
+    "title": "AI Inference at Scale",
+    "ranks": {
+      "2026-10-04": 21
+    },
+    "path": "/library/view/ai-inference-at/0642572392468/"
+  },
+  "9781808492778": {
+    "title": "Building AI-Powered Distributed Architectures with Aspire",
+    "ranks": {
+      "2026-10-04": 22
+    },
+    "path": "/library/view/building-ai-powered-distributed/9781808492778/"
+  },
+  "9781806690879": {
+    "title": "Multi-Agent AI Engineering",
+    "ranks": {
+      "2026-10-04": 23
+    },
+    "path": "/library/view/multi-agent-ai-engineering/9781806690879/"
+  },
+  "9781803238784": {
+    "title": "Hands-On Time Series Analysis with R - Second Edition",
+    "ranks": {
+      "2026-10-04": 24
+    },
+    "path": "/library/view/hands-on-time-series/9781803238784/"
+  },
+  "9781808490330": {
+    "title": "Make Your Org Quantum-Safe Without the Hype - FAST",
+    "ranks": {
+      "2026-10-04": 25
+    },
+    "path": "/library/view/make-your-org/9781808490330/"
+  },
+  "9781808347832": {
+    "title": "Automated Code Refactoring and Modernization with OpenRewrite",
+    "ranks": {
+      "2026-10-04": 26
+    },
+    "path": "/library/view/automated-code-refactoring/9781808347832/"
+  },
+  "9781806695072": {
+    "title": "Embedded Linux Development Using Yocto Project - Fourth Edition",
+    "ranks": {
+      "2026-10-04": 27
+    },
+    "path": "/library/view/embedded-linux-development/9781806695072/"
+  },
+  "9781806701438": {
+    "title": "Becoming a Salesforce Certified Technical Architect - Third Edition",
+    "ranks": {
+      "2026-10-04": 28
+    },
+    "path": "/library/view/becoming-a-salesforce/9781806701438/"
+  },
+  "9781806386574": {
+    "title": "Securing the Autonomous Supply Chain",
+    "ranks": {
+      "2026-10-04": 29
+    },
+    "path": "/library/view/securing-the-autonomous/9781806386574/"
+  },
+  "9781808493799": {
+    "title": "Pragmatic Clean Code",
+    "ranks": {
+      "2026-10-04": 30
+    },
+    "path": "/library/view/pragmatic-clean-code/9781808493799/"
+  },
+  "9781808657375": {
+    "title": "The Blender 5 Environment Artist's Guide Part 1",
+    "ranks": {
+      "2026-10-04": 31
+    },
+    "path": "/library/view/the-blender-5/9781808657375/"
+  },
+  "9781806385430": {
+    "title": "Flutter Cookbook - Third Edition",
+    "ranks": {
+      "2026-10-04": 32
+    },
+    "path": "/library/view/flutter-cookbook/9781806385430/"
+  },
+  "9781808495274": {
+    "title": "The Practical Network Engineer's Guide",
+    "ranks": {
+      "2026-10-04": 33
+    },
+    "path": "/library/view/the-practical-network/9781808495274/"
+  },
+  "9798868832314": {
+    "title": "Hyper-Agile Testing: Delivering Software in an AI-Accelerated World",
+    "ranks": {
+      "2026-10-04": 34
+    },
+    "path": "/library/view/hyper-agile-testing-delivering/9798868832314/"
+  },
+  "9781807300814": {
+    "title": "AI Governance in Practice",
+    "ranks": {
+      "2026-10-04": 35
+    },
+    "path": "/library/view/ai-governance-in/9781807300814/"
+  },
+  "9781808496516": {
+    "title": "Learn Music Theory",
+    "ranks": {
+      "2026-10-04": 36
+    },
+    "path": "/library/view/learn-music-theory/9781808496516/"
+  },
+  "9781633435124": {
+    "title": "Building Distributed Applications that Work",
+    "ranks": {
+      "2026-10-04": 37
+    },
+    "path": "/library/view/building-distributed-applications/9781633435124/"
+  },
+  "9781803243436": {
+    "title": "Autodesk Revit for Beginners",
+    "ranks": {
+      "2026-10-04": 38
+    },
+    "path": "/library/view/autodesk-revit-for/9781803243436/"
+  },
+  "9781806386659": {
+    "title": "Agentic AI for Platform Engineering",
+    "ranks": {
+      "2026-10-04": 39
+    },
+    "path": "/library/view/agentic-ai-for/9781806386659/"
+  },
+  "9781806384693": {
+    "title": "Advanced Smart Home Automation Solutions with Home Assistant",
+    "ranks": {
+      "2026-10-04": 40
+    },
+    "path": "/library/view/advanced-smart-home/9781806384693/"
+  },
+  "9798868830624": {
+    "title": "From Prototypes to Production: A 90-Day Playbook for Shipping Enterprise AI",
+    "ranks": {
+      "2026-10-04": 41
+    },
+    "path": "/library/view/from-prototypes-to/9798868830624/"
+  },
+  "9798868827822": {
+    "title": "System Design with AI Interview Guide : Designing Scalable, Agentic, and Defensible Systems",
+    "ranks": {
+      "2026-10-04": 42
+    },
+    "path": "/library/view/system-design-with/9798868827822/"
+  },
+  "9798868826979": {
+    "title": "Web Development Essentials Study Companion : Getting Ready for the LPI 030-100 Exam",
+    "ranks": {
+      "2026-10-04": 43
+    },
+    "path": "/library/view/web-development-essentials/9798868826979/"
   }
 }
