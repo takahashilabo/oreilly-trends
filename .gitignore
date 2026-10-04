@@ -2,5 +2,3 @@
 data/pool/
 .DS_Store
 __pycache__/
-posts/
-.env
